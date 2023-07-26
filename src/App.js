@@ -7,20 +7,23 @@ function App() {
       <title>
         Welcome to Rizvee's Page!
       </title>
-      <header className="App-header">
+      <header className="App-main">
         <h1 id="welcome">
           Hello.
         </h1>
+        <h2 className='Subtitle'>
+          My name is Rizvee.
+        </h2>
         <p className="Body-text">
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to my website. Let me walk you through everything you need to know about me. It all started when I was born...
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="button button-inline" 
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Your Mom
+          Learn More
         </a>
       </header>
     </div>

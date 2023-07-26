@@ -13,20 +13,44 @@
   }
 }
 
-.App-header {
-  background-color: rgb(219, 221, 223);
+.App-main {
+  background-color: rgb(211, 217, 222);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  padding: 4em 5em 5em;
-  color: #282c34;
+  font-family: 'Roboto', sans-serif;
+  padding: 4.75em 8em 2em;
+  color: #35383d;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: 'Roboto', sans-serif; /* Or any other font you want to use */
+  font-size: 18px;
+  color: #35383d; /* Dark text */
+  background: transparent; /* Background that matches its surrounding */
+  border: 2px solid #35383d; /* Dark border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease; /* Transition for a smooth color change */
+  text-decoration: none; /* Removes underline if the button is a link */
+}
+
+.button:hover {
+  background: #35383d; /* Dark background */
+  color: rgb(211, 217, 222); /* Light text */
+}
+
+.button:active {
+  background: #292b2e; /* Slightly lighter background */
+  color: rgb(211, 217, 222); /* Light text */
 }
 
 @keyframes App-logo-spin {
@@ -41,10 +65,26 @@
 #welcome {
   font-size: 5.0em;
   font-weight: lighter;
+  margin-bottom: .36em;
+}
+
+.button-inline {
+  margin-top: 1.75em;
+  margin-left: 0.45em;
+}
+
+.Subtitle {
+  font-size: 1.8em;
+  font-weight: 350;
+  margin-top: 0em;
+  padding-left: 0.16em;
+  margin-bottom: 0.9em;
+  text-align: left;
 }
 
 .Body-text {
   padding-left: .39em;
+  text-align: left;
 }
 
 

@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(219, 221, 223);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 4em 5em 5em;
+  color: #282c34;
 }
 
 .App-link {
@@ -36,3 +37,40 @@
     transform: rotate(360deg);
   }
 }
+
+#welcome {
+  font-size: 5.0em;
+  font-weight: lighter;
+}
+
+.Body-text {
+  padding-left: .39em;
+}
+
+
+/*  */
+
+/* 
+  <p>Hello <em>world</em>!</p>
+  <p id="root">Hello <em>world</em>!</p>
+  <p class="underlined">Hello <em>world</em>!</p>
+  <p class="epc-style-class-name button underlined yellow">Hello <em>world</em>!</p>
+ */
+
+/* 
+p {
+  
+}
+
+p:nth-child(2) {
+  color: red;
+}
+
+
+#root {
+  color: red;
+}
+
+.underlined {
+  text-decoration: underline;
+} */

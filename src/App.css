@@ -1,5 +1,16 @@
+:root {
+  --light-color: rgb(211, 217, 222);
+  --main-color: #35383d;
+  --active-color: #292b2e;
+}
+
 .App {
-  text-align: center;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .App-logo {
@@ -23,7 +34,7 @@
   font-size: calc(10px + 2vmin);
   font-family: 'Roboto', sans-serif;
   padding: 4.65em 8em 2em;
-  color: #35383d;
+  color: var(--main-color);
 }
 
 .App-link {
@@ -35,22 +46,22 @@
   padding: 12px 24px;
   font-family: 'Roboto', sans-serif; /* Or any other font you want to use */
   font-size: 18px;
-  color: #35383d; /* Dark text */
+  color: var(--main-color); /* Dark text */
   background: transparent; /* Background that matches its surrounding */
-  border: 2px solid #35383d; /* Dark border */
+  border: 2px solid var(--main-color); /* Dark border */
   border-radius: 6px; /* Rounded corners */
   transition: background 0.3s ease; /* Transition for a smooth color change */
   text-decoration: none; /* Removes underline if the button is a link */
 }
 
 .button:hover {
-  background: #35383d; /* Dark background */
-  color: rgb(211, 217, 222); /* Light text */
+  background: var(--main-color); /* Dark background */
+  color: var(--light-color) /* Light text */
 }
 
 .button:active {
-  background: #292b2e; /* Slightly lighter background */
-  color: rgb(211, 217, 222); /* Light text */
+  background: var(--active-color); /* Slightly lighter background */
+  color: var(--light-color); /* Light text */
 }
 
 .scrollTop {
@@ -60,7 +71,7 @@
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background: rgb(211, 217, 222); /* Light background */
+  background: var(--light-color); /* Light background */
   border: 2px solid #35383d; /* Dark border */
   z-index: 1000;
   cursor: pointer;
@@ -72,13 +83,13 @@
 }
 
 .scrollTop:hover {
-  background: #35383d; /* Dark background */
-  color: rgb(211, 217, 222); /* Light text */
+  background: var(--main-color); /* Dark background */
+  color: var(--light-color); /* Light text */
 }
 
 .scrollTop:active {
-  background: #292b2e; /* Slightly lighter background */
-  color: rgb(211, 217, 222); /* Light text */
+  background: var(--active-color); /* Slightly lighter background */
+  color: var(--light-color); /* Light text */
 }
 
 .scrollTop.show {
@@ -106,7 +117,7 @@
 }
 
 body {
-  background-color: rgb(211, 217, 222);
+  background-color: var(--light-color);
 }
 
 .Subtitle {

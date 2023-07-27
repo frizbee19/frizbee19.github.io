@@ -20,9 +20,9 @@ function App() {
   };
 
   const checkScrollTop = () => {
-    if (!showScroll && window.scrollY > 30) {
+    if (!showScroll && window.scrollY > 100) {
       setShowScroll(true)
-    } else if (showScroll && window.scrollY <= 30) {
+    } else if (showScroll && window.scrollY <= 100) {
       setShowScroll(false)
     }
   };
@@ -34,6 +34,13 @@ function App() {
         <title>
           Welcome to Rizvee's Page!
         </title>
+        <nav className={`navbar ${showScroll ? "show" : ''}`}>
+          <div className="nav-links-container">
+            <a className='nav-links' href="#section1">Section 1</a>
+            <a className='nav-links' href="#section2">Section 2</a>
+            <a className='nav-button' href="#section3">Contact Me</a>
+          </div>
+        </nav>
         <button className={`scrollTop ${showScroll ? 'show' : ''}`} onClick={() => { scrollToSection('introduction'); setShowScroll(false) }}>
           <span class="material-symbols-outlined">
             keyboard_double_arrow_up

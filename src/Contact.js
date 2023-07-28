@@ -21,17 +21,17 @@ const Contact = () => {
 
   return (
     <body>
+      <nav className={'navbar'} style={{ background: 'transparent' }}>
+        <div className="nav-links-container">
+          <Link className='nav-button' to="/">Home</Link>
+        </div>
+      </nav>
       <div className='App'>
         <title>
           Contact Me!
         </title>
-        <nav className={'navbar'} style={{ background: 'transparent' }}>
-          <div className="nav-links-container">
-            <Link className='nav-button' to="/">Home</Link>
-          </div>
-        </nav>
         <header className="App-main">
-          <h1 className='Subtitle'>Contact Me</h1>
+          <h1 className='Subtitle' style={{ marginTop: '2em' }}>Contact Me</h1>
           <div className='Contact-line'>
             <span class="material-symbols-rounded" style={{ fontSize: 36 }}>
               mail

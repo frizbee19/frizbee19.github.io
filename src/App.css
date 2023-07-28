@@ -5,7 +5,7 @@
 }
 
 .App {
-  animation: fadeIn 0.6s ease-in-out forwards;
+  animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -234,6 +234,44 @@ body {
   margin-bottom: 24px;
 }
 
+.video-background {
+  position: relative;
+  height: 35em; /* Set your height here */
+  overflow: hidden; /* Prevents video spilling out */
+  width: 100%;
+}
+
+.video {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 45%;
+  color: var(--light-color);
+  backdrop-filter: blur(15px);
+  background: linear-gradient(to right, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.05) 100%);
+  overflow: hidden; /* To ensure the pseudo-element doesn't extend beyond the div */
+}
+
+.blur-overlay-content {
+  font-size: calc(10px + 2vmin);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.85;
+  font-weight: 300;
+  padding-left: 5em;
+  padding-right: 2.5em;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
 
 
 

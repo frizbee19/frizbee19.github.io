@@ -37,8 +37,8 @@ function Home() {
         </title>
         <nav className={`navbar ${showScroll ? "show" : ''}`}>
           <div className="nav-links-container">
-            <a className='nav-links' href="#section1">Section 1</a>
-            <a className='nav-links' href="#section2">Section 2</a>
+            <a className='nav-links' href="#section1">About</a>
+            <a className='nav-links' href="#section2">Projects</a>
             <Link className='nav-button' to="/contact">Contact Me</Link>
           </div>
         </nav>

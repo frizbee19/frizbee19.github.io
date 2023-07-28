@@ -1,22 +1,22 @@
 import React from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 const Contact = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  function isMobileDevice() {
-    console.log(navigator.userAgent);
-    return /Android|iPhone|BlackBerry/i.test(navigator.userAgent);
-  }
+  // function isMobileDevice() {
+  //   console.log(navigator.userAgent);
+  //   return /Android|iPhone|BlackBerry/i.test(navigator.userAgent);
+  // }
 
 
-  useEffect(() => {
-    if (isMobileDevice()) {
-      setIsMobile(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (isMobileDevice()) {
+  //     setIsMobile(true);
+  //   }
+  // }, []);
 
 
   return (
@@ -43,9 +43,9 @@ const Contact = () => {
               call
             </span>
             {isMobile ? (
-              <a href="tel:">(214) 277-2964</a>
+              <a href="tel:1234567890">1234567890</a>
             ) : (
-              <p></p>
+              <p>1234567890</p>
             )}
           </div> */}
           <div className='Contact-line'>

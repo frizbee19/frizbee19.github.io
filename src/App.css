@@ -236,7 +236,7 @@ body {
 
 .video-background {
   position: relative;
-  height: 35em; /* Set your height here */
+  height: 40em; /* Set your height here */
   overflow: hidden; /* Prevents video spilling out */
   width: 100%;
 }
@@ -266,7 +266,7 @@ body {
   font-size: calc(10px + 2vmin);
   font-family: 'Roboto', sans-serif;
   line-height: 1.85;
-  font-weight: 300;
+  font-weight: 400;
   padding-left: 5em;
   padding-right: 2.5em;
   padding-top: 4em;

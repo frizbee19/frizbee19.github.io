@@ -36,6 +36,17 @@
   color: var(--main-color);
 }
 
+.App-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  font-family: 'Roboto', sans-serif;
+  padding: 4em 2em 2em;
+  color: var(--main-color);
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -236,7 +247,7 @@ body {
 
 .video-background {
   position: relative;
-  height: 40em; /* Set your height here */
+  height: 45em; /* Set your height here */
   overflow: hidden; /* Prevents video spilling out */
   width: 100%;
 }
@@ -249,6 +260,54 @@ body {
   min-height: 100%;
   object-fit: cover;
 }
+
+.blur-img-background {
+  position: relative;
+  height: 35em; /* Set your height here */
+  overflow: hidden; /* Prevents video spilling out */
+  width: 100%;
+}
+
+.blur-img {
+  position: absolute;
+  z-index: 1;
+  filter: blur(4px);
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  min-height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.blur-img-tint::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1; /* this will set the ::before pseudo-element behind the text */
+}
+
+
+.blur-img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  font-family: 'Roboto', sans-serif;
+  padding: 4em 2em 2em;
+  color: var(--main-color);
+  line-height: 1.85;
+  font-weight: 400;
+  position: absolute;
+  z-index: 2;
+}
+
+
 
 .blur-overlay {
   position: absolute;
@@ -298,6 +357,20 @@ body {
   color: var(--active-color); /* Light text */
 }
 
+.blur-img-button {
+  color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+.blur-img-button:hover {
+  color: var(--light-color);
+  background-color: var(--active-color);
+}
+
+.blur-img-button:active {
+  color: var(--light-color);
+  background-color: var(--main-color);
+}
 
 /*  */
 

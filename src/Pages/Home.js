@@ -1,12 +1,25 @@
 import '../App.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMobile } from '../MobileProvider';
 
 
 function Home() {
   const [showScroll, setShowScroll] = useState(false)
 
+  const isMobile = useMobile();
+  const displayType = isMobile ? 'App-mobile' : 'App-main';
 
+  // Check if mobile
+  // useEffect(() => {
+  //   console.log(navigator.userAgent);
+  //   setIsMobile(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) ||
+  //     navigator.userAgent.match(/iPhone/i) || /* check screen ratio for mobile*/ window.innerWidth < window.innerHeight);
+  //   console.log(isMobile);
+  //   if (isMobile) {
+  //     setDisplayType('App-mobile');
+  //   }
+  // }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollTop);
@@ -32,13 +45,22 @@ function Home() {
   return (
     <body>
       {/* Navbar */}
-      <nav className={`navbar ${showScroll ? "show" : ''}`}>
-        <div className="nav-links-container">
-          <button className='nav-links' onClick={() => { scrollToSection('about'); }}>About</button>
-          <button className='nav-links' onClick={() => { scrollToSection('projects'); }}>Projects</button>
-          <Link className='nav-button' to="/contact">Contact Me</Link>
-        </div>
-      </nav>
+
+      {!isMobile ? (
+        <nav className={`navbar ${showScroll ? "show" : ''}`}>
+          <div className="nav-links-container">
+            <button className='nav-links' onClick={() => { scrollToSection('about'); }}>About</button>
+            <button className='nav-links' onClick={() => { scrollToSection('projects'); }}>Projects</button>
+            <Link className='nav-button' to="/contact">Contact Me</Link>
+          </div>
+        </nav>
+      ) : (
+        <nav className={`navbar ${showScroll ? "show" : ''}`}>
+          <div className="nav-links-container" style={{ transform: 'scale(0.8)' }}>
+            <Link className='nav-button' to="/contact" style={{ marginRight: -30 }}>Contact Me</Link>
+          </div>
+        </nav>
+      )}
       <div className="App">
         <title>
           Welcome to Rizvee's Page!
@@ -53,7 +75,7 @@ function Home() {
 
         {/* Introduction */}
         <div id="introduction">
-          <header className="App-main">
+          <header className={displayType}>
             <h1 className="Welcome">
               Hello.
             </h1>
@@ -68,7 +90,7 @@ function Home() {
 
         {/* About */}
         <div id="about">
-          <header className="App-main" style={{ marginBottom: '-2.5em' }}>
+          <header className={displayType} style={{ marginBottom: '-2.5em' }}>
             <h2 className='Subtitle'>
               About Me
             </h2>
@@ -105,26 +127,42 @@ function Home() {
 
         {/* Projects */}
         <div id="projects">
-          <header className="App-main">
+          <header className={displayType}>
             <h1 className='Subtitle' style={{ paddingRight: '0.5em' }}>
               Hi. Do you like games? I like games. Let's talk about some of my game projects.
             </h1>
           </header>
-          <div class="video-background">
-            <video class="video" autoPlay loop muted disablePictureInPicture src='/Media/rickroll.mp4'>
-              {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
-            </video>
-            <div className="blur-overlay">
-              <div className="blur-overlay-content">
+          {/* Drawn to Reality */}
+          {!isMobile ? (
+            <div className="video-background">
+              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/rickroll.mp4'>
+                {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
+              </video>
+              <div className="blur-overlay">
+                <div className="blur-overlay-content">
+                  <h2 className='Subtitle'>
+                    Drawn to Reality
+                  </h2>
+                  <p className='Body-text' style={{ lineHeight: '1.55em' }}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
+                  <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="blur-img-background">
+              <div className="blur-img-tint">
+                <img src='/Media/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
+              </div>
+              <div className="blur-img-content">
                 <h2 className='Subtitle'>
                   Drawn to Reality
                 </h2>
-                <p className='Body-text' style={{lineHeight: '1.55em'}}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
-                <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
+                <p className='Body-text' style={{ lineHeight: '1.55em' }}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
+                <Link className='blur-overlay-button blur-img-button' to="/drawntoreality">Learn More</Link>
               </div>
             </div>
-          </div>
-          <header className="App-main">
+          )}
+          <header className={displayType}>
           </header>
         </div>
       </div>

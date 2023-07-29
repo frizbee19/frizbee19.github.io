@@ -3,6 +3,10 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function GameJam() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
   return (
     <body>
       {/* Navbar */}

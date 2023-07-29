@@ -114,10 +114,9 @@ function Home() {
         {/* Projects */}
         <div id="projects">
           <header className="App-main">
-            <h2 className='Subtitle' style={{ paddingRight: '0.5em' }}>
+            <h1 className='Subtitle' style={{ paddingRight: '0.5em' }}>
               Hi. Do you like games? I like games. Let's talk about some of my game projects.
-            </h2>
-            <Link className='button button-inline' to="/drawntoreality">Drawn to Reality</Link>
+            </h1>
           </header>
           <div class="video-background">
             <video class="video" autoPlay loop muted disablePictureInPicture src='/Media/rickroll.mp4'>
@@ -125,7 +124,11 @@ function Home() {
             </video>
             <div className="blur-overlay">
               <div className="blur-overlay-content">
-                <p>Your text goes here alsjdfhlasdfhasljdfhasjld laksdfhjaslkdhfjkashdf aslkdfjaslkjdhfasjlkdf askdlja akldjfhalskdfh asdkjlfhasdkjlfh</p>
+                <h2 className='Subtitle'>
+                  Drawn to Reality
+                </h2>
+                <p>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
+                <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
               </div>
             </div>
           </div>

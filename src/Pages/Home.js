@@ -63,14 +63,6 @@ function Home() {
             <p className="Body-text">
               Welcome to my website. Let me walk you through everything you need to know about me. It all started when I was born...
             </p>
-            <a
-              className="button button-inline"
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn More
-            </a>
           </header>
         </div>
 
@@ -127,7 +119,7 @@ function Home() {
                 <h2 className='Subtitle'>
                   Drawn to Reality
                 </h2>
-                <p>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
+                <p className='Body-text' style={{lineHeight: '1.55em'}}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
                 <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
               </div>
             </div>

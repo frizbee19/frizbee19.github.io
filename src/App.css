@@ -273,12 +273,6 @@ body {
   padding-bottom: 2em;
 }
 
-.blur-overlay-content p {
-  padding-left: .4em;
-  text-align: left;
-  font-size: 0.95em;
-}
-
 .blur-overlay-button {
   display: inline-block;
   padding: 12px 24px;

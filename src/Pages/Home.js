@@ -66,17 +66,19 @@ function Home() {
           Welcome to Rizvee's Page!
         </title>
 
-
+        {/* Scroll to top button */}
+        {!isMobile && (
         <button className={`scrollTop ${showScroll ? 'show' : ''}`} onClick={() => { scrollToSection('introduction'); setShowScroll(false) }} disabled={!showScroll}>
           <span className="material-symbols-outlined">
             keyboard_double_arrow_up
           </span>
         </button>
+        )}
 
         {/* Introduction */}
         <div id="introduction">
           <header className={displayType}>
-            <h1 className="Welcome">
+            <h1 className="big-header">
               Hello.
             </h1>
             <h2 className='Subtitle'>
@@ -135,7 +137,7 @@ function Home() {
           {/* Drawn to Reality */}
           {!isMobile ? (
             <div className="video-background">
-              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/rickroll.mp4'>
+              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/DrawnToRealityCompMute.mp4'>
                 {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
               </video>
               <div className="blur-overlay">

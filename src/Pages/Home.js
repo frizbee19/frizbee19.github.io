@@ -68,11 +68,11 @@ function Home() {
 
         {/* Scroll to top button */}
         {!isMobile && (
-        <button className={`scrollTop ${showScroll ? 'show' : ''}`} onClick={() => { scrollToSection('introduction'); setShowScroll(false) }} disabled={!showScroll}>
-          <span className="material-symbols-outlined">
-            keyboard_double_arrow_up
-          </span>
-        </button>
+          <button className={`scrollTop ${showScroll ? 'show' : ''}`} onClick={() => { scrollToSection('introduction'); setShowScroll(false) }} disabled={!showScroll}>
+            <span className="material-symbols-outlined">
+              keyboard_double_arrow_up
+            </span>
+          </button>
         )}
 
         {/* Introduction */}
@@ -84,7 +84,7 @@ function Home() {
             <h2 className='Subtitle'>
               My name is Rizvee.
             </h2>
-            <p className="Body-text">
+            <p className="Body-text" style={{marginBottom: '-4em'}}>
               Welcome to my website. Let me walk you through everything you need to know about me. It all started when I was born...
             </p>
           </header>
@@ -96,19 +96,24 @@ function Home() {
             <h2 className='Subtitle'>
               About Me
             </h2>
-            <div style={{ flexDirection: 'column', marginBottom: '1.45em' }}>
-              <p className="Body-text">
-                With a foundation rooted in a B.S. degree in Computer Science from UT Dallas and enriched by diverse professional experiences, my journey in software development has been multifaceted.
-              </p>
-              <p className="Body-text">
-                In my role as a Software Engineer at VibeStir, I spearheaded mobile app development using Node.js and React Native, designed core app interfaces with Figma, and drove Agile methodologies. During my Software Engineer Internship at Cvent, I contributed to backend development by designing and deploying vital API endpoints using Java and Docker.
-              </p>
-              <p className="Body-text">
-                Parallel to my professional path, I've been involved in noteworthy projects like the 'Capital One: Vulnerability Warriors' and the 'Drawn to Reality Game Jam'. As an Instructor at iCode, I also had the privilege of teaching programming fundamentals to K-12 students.
-              </p>
-              <p className="Body-text">
-                Technically, I'm proficient in languages like Java, C/C++, C#, Python, and Node.js. I have experience with Linux/UNIX systems, React Native, Unity, SQL/PostgreSQL, OpenGL, and Git. I also comfortably navigate Agile/Scrum methodologies.
-              </p>
+            <div style={{ flexDirection: !isMobile ? 'row' : 'column', marginBottom: '1.45em', display: 'flex' }}>
+              <div style={{ flexDirection: 'column', flex: !isMobile ? 4 : '0 1 auto', marginRight: !isMobile? '3em' : '0em' }}>
+                <p className="Body-text">
+                  With a foundation rooted in a B.S. degree in Computer Science from UT Dallas and enriched by diverse professional experiences, my journey in software development has been multifaceted.
+                </p>
+                <p className="Body-text">
+                  In my role as a Software Engineer at VibeStir, I spearheaded mobile app development using Node.js and React Native, designed core app interfaces with Figma, and drove Agile methodologies. During my Software Engineer Internship at Cvent, I contributed to backend development by designing and deploying vital API endpoints using Java and Docker.
+                </p>
+                <p className="Body-text">
+                  Parallel to my professional path, I've been involved in noteworthy projects like the 'Capital One: Vulnerability Warriors' and the 'Drawn to Reality' Game Jam. As an Instructor at iCode, I also had the privilege of teaching programming fundamentals to K-12 students.
+                </p>
+                <p className="Body-text">
+                  Technically, I'm proficient in languages like Java, C/C++, C#, Python, and Node.js. I have experience with Linux/UNIX systems, React Native, Unity, SQL/PostgreSQL, OpenGL, and Git. I also comfortably navigate Agile/Scrum methodologies.
+                </p>
+              </div>
+              <div style={{ flex: !isMobile ? 1.4 : '0 1 auto' }}>
+                <img src="/Media/RizveePortrait.jpg" alt="Rizvee" style={{ width: '100%', height: 'auto', borderRadius: 13, marginTop: '7.5%', boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)' }} />
+              </div>
             </div>
             <h2 className='Subtitle'>
               Mission
@@ -152,7 +157,7 @@ function Home() {
             </div>
           ) : (
             <div className="blur-img-background">
-              <div className="blur-img-tint">
+              <div>
                 <img src='/Media/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
               </div>
               <div className="blur-img-content">
@@ -166,6 +171,36 @@ function Home() {
           )}
           <header className={displayType}>
           </header>
+          {/* Ragdoll Project */}
+          {!isMobile ? (
+            <div className="video-background">
+              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/RagdollProjectCompMute.mp4'>
+                {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
+              </video>
+              <div className="blur-overlay blur-overlay-right">
+                <div className="blur-overlay-content blur-overlay-content-right">
+                  <h2 className='Subtitle'>
+                    Ragdoll Animation Test
+                  </h2>
+                  <p className='Body-text' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is meant to serve to establish foundational knowledge for future game development endeavors.</p>
+                  <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="blur-img-background">
+              <div>
+                <img src='/Media/RagdollProjectMobilePreview.png' alt='Ragdoll Project' className='blur-img'  />
+              </div>
+              <div className="blur-img-content">
+                <h2 className='Subtitle Body-text-light'>
+                  Ragdoll Animation Test
+                </h2>
+                <p className='Body-text Body-text-light' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is meant to serve to establish foundational knowledge for future game development endeavors.</p>
+                <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </body>

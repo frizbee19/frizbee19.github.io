@@ -5,6 +5,7 @@ import { useMobile } from '../MobileProvider';
 
 function GameJam() {
   const isMobile = useMobile();
+  const displayType = isMobile ? 'App-mobile' : 'App-main';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,12 +17,19 @@ function GameJam() {
     <body>
       {/* Navbar */}
       <nav className={'navbar'} style={{ background: 'transparent' }}>
-        <div className="nav-links-container">
-          <Link className='nav-button' to="/">Home</Link>
-        </div>
+
+        {!isMobile ? (
+          <div className="nav-links-container">
+            <Link className='nav-button' to="/">Home</Link>
+          </div>
+        ) : (
+          <div className="nav-links-container" style={{ transform: 'scale(0.8)' }}>
+            <Link className='nav-button' to="/" style={{ marginRight: -30 }}>Home</Link>
+          </div>
+        )}
       </nav>
       <div className='App'>
-        <header className="App-main">
+        <header className={displayType}>
           <h2 className='Subtitle' style={{ marginTop: '2em' }}>Drawn to Reality</h2>
           <p className='Body-text'>
             Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure. The game based on the theme "It is not real."

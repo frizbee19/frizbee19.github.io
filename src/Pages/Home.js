@@ -182,8 +182,8 @@ function Home() {
                   <h2 className='Subtitle'>
                     Ragdoll Animation Test
                   </h2>
-                  <p className='Body-text' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is meant to serve to establish foundational knowledge for future game development endeavors.</p>
-                  <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
+                  <p className='Body-text' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is serves as a way to establish foundational knowledge for future game development endeavors.</p>
+                  <Link className='blur-overlay-button' to="/ragdollproject">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -196,11 +196,14 @@ function Home() {
                 <h2 className='Subtitle Body-text-light'>
                   Ragdoll Animation Test
                 </h2>
-                <p className='Body-text Body-text-light' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is meant to serve to establish foundational knowledge for future game development endeavors.</p>
-                <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
+                <p className='Body-text Body-text-light' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project serves as a way to establish foundational knowledge for future game development endeavors.</p>
+                <Link className='blur-overlay-button' to="/ragdollproject">Learn More</Link>
               </div>
             </div>
           )}
+          <header className={displayType}>
+            
+          </header>
         </div>
       </div>
     </body>

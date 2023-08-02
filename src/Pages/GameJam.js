@@ -112,6 +112,9 @@ function GameJam() {
             The birds level is one of the later levels of the game, and it is meant to be a challenging level that tests the player's mastery of the mechanics.  
           </p>
           <p className='Body-text'>
+            As the introductory stage of the game, I had to make sure that the clouds level was easy and straightforward to play, while also teaching the player about the core mechanics one by one. The level uses clouds as the main platforms of the level. The level starts off with stationary clouds, and then introduces moving clouds, and then teases birds, which will be the main platforming element of a future level.
+          </p>
+          <p className='Body-text'>
             In my opinion, the birds level is the hardest level in the game, and also my favorite level in the game (I may or may not be biased here). I am the most proud of this level because I was able to create a level that is challenging in way that is different from the other levels in the game while still maintaining the core platforming mechanics.
             As the level theme suggests, the level is filled with birds. As one could guess, the level makes heavy use of the bird platforms and introduces the bird enemies. As discussed previously, some of the quirks with the bird platforms may cause some frustration for the player, but once the player gets a feel for the level, 
             it becomes entertaining as the player has to use everything that they have learned in previous to navigate through an unforgiving environment.
@@ -119,7 +122,11 @@ function GameJam() {
           {/* Lessons Learned */}
           <h2 className='Subtitle' style={{ marginTop: '1em' }}>Lessons Learned</h2>
           <p className='Body-text'>
-
+            Prior to this game jam, I had never worked on a game before, so I learned a lot about game development in general. I learned about the importance of planning and communication in a team setting, and I learned about the importance of time management and prioritization in a time constrained environment. 
+            I have long since learned more about the Unity Engine and software design philosophies in general, so in hindsight, I would have done a lot of things differently. However, I am still proud of what I was able to accomplish in the time that I had, and I am grateful for the opportunity to work with my peers on this project.
+          </p>
+          <p className='Body-text'>
+            You can play the game right now below (Note: The game is only playable on desktop). Keep in mind that there are still plenty of bugs and issues with the game since we did not have enough time to thoroughly test and debug the game, but I hope you enjoy it nonetheless!
           </p>
         </header>
         {!isMobile && (

@@ -142,7 +142,7 @@ function Home() {
           {/* Drawn to Reality */}
           {!isMobile ? (
             <div className="video-background">
-              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/DrawnToReality/DrawnToRealityCompMute.mp4'>
+              <video className="video-banner" autoPlay loop muted disablePictureInPicture src='/Media/DrawnToReality/DrawnToRealityCompMute.mp4'>
                 {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
               </video>
               <div className="blur-overlay">
@@ -174,7 +174,7 @@ function Home() {
           {/* Ragdoll Project */}
           {!isMobile ? (
             <div className="video-background">
-              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/RagdollProject/RagdollProjectCompMute.mp4'>
+              <video className="video-banner" autoPlay loop muted disablePictureInPicture src='/Media/RagdollProject/RagdollProjectCompMute.mp4'>
                 {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
               </video>
               <div className="blur-overlay blur-overlay-right">

@@ -9,7 +9,6 @@ export const MobileProvider = ({ children }) => {
 
   useEffect(() => {
     // Do your user agent check here
-    const userAgent = navigator.userAgent;
     if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) ||
     navigator.userAgent.match(/iPhone/i) || /* check screen ratio for mobile*/ window.innerWidth < window.innerHeight) {
       setIsMobile(true);

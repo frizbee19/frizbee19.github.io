@@ -22,6 +22,14 @@ function Home() {
   // }, []);
 
   useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScroll && window.scrollY > 100) {
+        setShowScroll(true)
+      } else if (showScroll && window.scrollY <= 100) {
+        setShowScroll(false)
+      }
+    };
+
     window.addEventListener('scroll', checkScrollTop);
     return () => window.removeEventListener('scroll', checkScrollTop); // Clean up event listener on component unmount
   }, [showScroll]);
@@ -30,14 +38,6 @@ function Home() {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const checkScrollTop = () => {
-    if (!showScroll && window.scrollY > 100) {
-      setShowScroll(true)
-    } else if (showScroll && window.scrollY <= 100) {
-      setShowScroll(false)
     }
   };
 
@@ -142,7 +142,7 @@ function Home() {
           {/* Drawn to Reality */}
           {!isMobile ? (
             <div className="video-background">
-              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/DrawnToRealityCompMute.mp4'>
+              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/DrawnToReality/DrawnToRealityCompMute.mp4'>
                 {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
               </video>
               <div className="blur-overlay">
@@ -158,7 +158,7 @@ function Home() {
           ) : (
             <div className="blur-img-background">
               <div>
-                <img src='/Media/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
+                <img src='/Media/DrawnToReality/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
               </div>
               <div className="blur-img-content">
                 <h2 className='Subtitle'>
@@ -174,7 +174,7 @@ function Home() {
           {/* Ragdoll Project */}
           {!isMobile ? (
             <div className="video-background">
-              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/RagdollProjectCompMute.mp4'>
+              <video className="video" autoPlay loop muted disablePictureInPicture src='/Media/RagdollProject/RagdollProjectCompMute.mp4'>
                 {/* <source src="../Media/rickroll.mp4" type="video/mp4"/> */}
               </video>
               <div className="blur-overlay blur-overlay-right">
@@ -190,7 +190,7 @@ function Home() {
           ) : (
             <div className="blur-img-background">
               <div>
-                <img src='/Media/RagdollProjectMobilePreview.png' alt='Ragdoll Project' className='blur-img'  />
+                <img src='/Media/RagdollProject/RagdollProjectMobilePreview.png' alt='Ragdoll Project' className='blur-img'  />
               </div>
               <div className="blur-img-content">
                 <h2 className='Subtitle Body-text-light'>

@@ -16,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
+      {/* <footer className="Footer"></footer> */}
     </MobileProvider>
   );
 }

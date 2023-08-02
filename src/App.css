@@ -9,8 +9,13 @@
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .App-logo {
@@ -52,27 +57,35 @@
 }
 
 .navbar {
-  position: fixed; /* Make the navbar fixed at the top of the page */
+  position: fixed;
+  /* Make the navbar fixed at the top of the page */
   top: 0;
   width: 100%;
-  background-color: var(--light-color); /* Or any color you prefer */
-  z-index: 100; /* Ensure the navbar is above other content */
+  background-color: var(--light-color);
+  /* Or any color you prefer */
+  z-index: 100;
+  /* Ensure the navbar is above other content */
   justify-content: center;
   transition: box-shadow 0.12s ease-in-out;
 }
 
 .navbar.show {
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,0.275); /* Optional: Add a shadow for a bit of depth */
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.275);
+  /* Optional: Add a shadow for a bit of depth */
 }
 
 .nav-links-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: flex-end; /* Align links to the right */
-  padding-right: 24px; /* Add some padding */
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: flex-end;
+  /* Align links to the right */
+  padding-right: 24px;
+  /* Add some padding */
 }
 
 .nav-links {
-  margin-left: 12px; /* Add some margin between links */
+  margin-left: 12px;
+  /* Add some margin between links */
   margin-right: 12px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -81,10 +94,14 @@
   background: none;
   border: none;
   font: inherit;
-  text-decoration: none; /* Remove underline */
-  color: var(--main-color); /* Or any color you prefer */
-  font-size: 20px; /* Set a font size */
-  transition: text-decoration .2s ease-in-out; /* Transition for a smooth hover effect */
+  text-decoration: none;
+  /* Remove underline */
+  color: var(--main-color);
+  /* Or any color you prefer */
+  font-size: 20px;
+  /* Set a font size */
+  transition: text-decoration .2s ease-in-out;
+  /* Transition for a smooth hover effect */
 }
 
 .nav-links:hover {
@@ -100,53 +117,76 @@ button:disabled {
 .button {
   display: inline-block;
   padding: 12px 24px;
-  font-family: 'Roboto', sans-serif; /* Or any other font you want to use */
+  font-family: 'Roboto', sans-serif;
+  /* Or any other font you want to use */
   font-size: 18px;
-  color: var(--main-color); /* Dark text */
-  background: transparent; /* Background that matches its surrounding */
-  border: 2px solid var(--main-color); /* Dark border */
-  border-radius: 6px; /* Rounded corners */
-  transition: background 0.25s ease, color 0.25s ease; /* Transition for a smooth color change */
-  text-decoration: none; /* Removes underline if the button is a link */
+  color: var(--main-color);
+  /* Dark text */
+  background: transparent;
+  /* Background that matches its surrounding */
+  border: 2px solid var(--main-color);
+  /* Dark border */
+  border-radius: 6px;
+  /* Rounded corners */
+  transition: background 0.25s ease, color 0.25s ease;
+  /* Transition for a smooth color change */
+  text-decoration: none;
+  /* Removes underline if the button is a link */
 }
 
 .nav-button {
-  margin-left: 9px; /* Add some margin between links */
+  margin-left: 9px;
+  /* Add some margin between links */
   margin-right: 15px;
   margin-top: 7px;
   margin-bottom: 7px;
-  color: var(--light-color); /* Or any color you prefer */
-  font-size: 20px; /* Set a font size */
+  color: var(--light-color);
+  /* Or any color you prefer */
+  font-size: 20px;
+  /* Set a font size */
   display: inline-block;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 13px;
   padding-right: 13px;
-  background: var(--main-color); /* Background that matches its surrounding */
-  border: 2px solid var(--main-color); /* Dark border */
-  border-radius: 8px; /* Rounded corners */
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out; /* Transition for a smooth color change */
-  text-decoration: none; /* Removes underline if the button is a link */
+  background: var(--main-color);
+  /* Background that matches its surrounding */
+  border: 2px solid var(--main-color);
+  /* Dark border */
+  border-radius: 8px;
+  /* Rounded corners */
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  /* Transition for a smooth color change */
+  text-decoration: none;
+  /* Removes underline if the button is a link */
 }
 
 .nav-button:hover {
-  background: var(--light-color); /* Dark background */
-  color: var(--main-color) /* Light text */
+  background: var(--light-color);
+  /* Dark background */
+  color: var(--main-color)
+    /* Light text */
 }
 
 .nav-button:active {
-  background: var(--active-color); /* Slightly lighter background */
-  color: var(--light-color); /* Light text */
+  background: var(--active-color);
+  /* Slightly lighter background */
+  color: var(--light-color);
+  /* Light text */
 }
 
 .button:hover {
-  background: var(--main-color); /* Dark background */
-  color: var(--light-color) /* Light text */
+  background: var(--main-color);
+  /* Dark background */
+  color: var(--light-color)
+    /* Light text */
 }
 
 .button:active {
-  background: var(--active-color); /* Slightly lighter background */
-  color: var(--light-color); /* Light text */
+  background: var(--active-color);
+  /* Slightly lighter background */
+  color: var(--light-color);
+  /* Light text */
 }
 
 .scrollTop {
@@ -156,26 +196,34 @@ button:disabled {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background: var(--light-color); /* Light background */
-  border: 2px solid #35383d; /* Dark border */
+  background: var(--light-color);
+  /* Light background */
+  border: 2px solid #35383d;
+  /* Dark border */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.175);
   z-index: 1000;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;  /* Start as hidden */
-  transition: opacity 0.135s ease-in-out, background 0.25s ease, color 0.25s ease; /* Transition for a smooth color change */
+  opacity: 0;
+  /* Start as hidden */
+  transition: opacity 0.135s ease-in-out, background 0.25s ease, color 0.25s ease;
+  /* Transition for a smooth color change */
 }
 
 .scrollTop:hover {
-  background: var(--main-color); /* Dark background */
-  color: var(--light-color); /* Light text */
+  background: var(--main-color);
+  /* Dark background */
+  color: var(--light-color);
+  /* Light text */
 }
 
 .scrollTop:active {
-  background: var(--active-color); /* Slightly lighter background */
-  color: var(--light-color); /* Light text */
+  background: var(--active-color);
+  /* Slightly lighter background */
+  color: var(--light-color);
+  /* Light text */
 }
 
 .scrollTop.show {
@@ -186,6 +234,7 @@ button:disabled {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -195,6 +244,20 @@ button:disabled {
   font-size: 5.0em;
   font-weight: lighter;
   margin-bottom: .38em;
+}
+
+.Footer {
+  height: 50px;
+  /* Define a height for your footer */
+  background-color: var(--active-color);
+  /* Background color for your footer */
+  color: var(--light-color);
+  /* Font color for your footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  /* Pushes the footer to the bottom */
 }
 
 .button-inline {
@@ -226,6 +289,13 @@ body {
   color: var(--light-color);
 }
 
+.Caption {
+  font-size: 0.6em;
+  padding-left: 0.4em;
+  line-height: 1.15;
+  text-align: left;
+}
+
 .Contact-line {
   flex-direction: row;
   display: flex;
@@ -252,8 +322,10 @@ body {
 
 .video-background {
   position: relative;
-  height: 45em; /* Set your height here */
-  overflow: hidden; /* Prevents video spilling out */
+  height: 45em;
+  /* Set your height here */
+  overflow: hidden;
+  /* Prevents video spilling out */
   width: 100%;
 }
 
@@ -268,8 +340,10 @@ body {
 
 .blur-img-background {
   position: relative;
-  height: 35em; /* Set your height here */
-  overflow: hidden; /* Prevents video spilling out */
+  height: 35em;
+  /* Set your height here */
+  overflow: hidden;
+  /* Prevents video spilling out */
   width: 100%;
 }
 
@@ -292,8 +366,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5); 
-  z-index: 1; /* this will set the ::before pseudo-element behind the text */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  /* this will set the ::before pseudo-element behind the text */
 }
 
 
@@ -322,14 +397,15 @@ body {
   width: 45%;
   color: var(--light-color);
   backdrop-filter: blur(15px);
-  background: linear-gradient(to right, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.025) 100%);
-  overflow: hidden; /* To ensure the pseudo-element doesn't extend beyond the div */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.025) 100%);
+  overflow: hidden;
+  /* To ensure the pseudo-element doesn't extend beyond the div */
 }
 
 .blur-overlay-right {
   right: 0;
   left: auto;
-  background: linear-gradient(to left, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.025) 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.025) 100%);
 }
 
 .blur-overlay-content {
@@ -351,26 +427,37 @@ body {
 .blur-overlay-button {
   display: inline-block;
   padding: 12px 24px;
-  font-family: 'Roboto', sans-serif; /* Or any other font you want to use */
+  font-family: 'Roboto', sans-serif;
+  /* Or any other font you want to use */
   font-size: 18px;
-  color: var(--light-color); /* Dark text */
-  background: transparent; /* Background that matches its surrounding */
-  border: 2px solid var(--light-color); /* Dark border */
-  border-radius: 6px; /* Rounded corners */
-  transition: background 0.25s ease, color 0.25s ease; /* Transition for a smooth color change */
-  text-decoration: none; /* Removes underline if the button is a link */
+  color: var(--light-color);
+  /* Dark text */
+  background: transparent;
+  /* Background that matches its surrounding */
+  border: 2px solid var(--light-color);
+  /* Dark border */
+  border-radius: 6px;
+  /* Rounded corners */
+  transition: background 0.25s ease, color 0.25s ease;
+  /* Transition for a smooth color change */
+  text-decoration: none;
+  /* Removes underline if the button is a link */
   margin-top: 2em;
   margin-left: 0.375em;
 }
 
 .blur-overlay-button:hover {
-  background: var(--light-color); /* Dark background */
-  color: var(--main-color) /* Light text */
+  background: var(--light-color);
+  /* Dark background */
+  color: var(--main-color)
+    /* Light text */
 }
 
 .blur-overlay-button:active {
-  background: var(--light-color); /* Slightly lighter background */
-  color: var(--active-color); /* Light text */
+  background: var(--light-color);
+  /* Slightly lighter background */
+  color: var(--active-color);
+  /* Light text */
 }
 
 .blur-img-button {

@@ -77,6 +77,10 @@ function GameJam() {
             One of the core components of the game that I worked on is the dialogue system that is present throughout the game. The dialogue system is like those found in old school RPGs, where the text prints out letter by letter at a certain pace, or if input is received from the player, it will instantly print all of the characters for that part of the dialogue.
             The dialogue boxes show the faces and reactions of the current speaker, and play a talking animation as the letters are getting printed. Additionally, a sound effect gets played at a random pitch within a range for each letter that gets printed.
           </p>
+          <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
+            <video className='video' controls src='/Media/DrawnToReality/DrawnToRealityDialogue.mp4'/>
+            <p className='Caption'>Dialogue audio, talking animation, different emotes and skipping dialogue.</p>
+          </div>
           <p className='Body-text'>
             I designed the system to be modular and easy to use, allowing for the team to easily add dialogue to the game. Once the script is added to a textbox game object, developer can manually add pages of dialogue, or if the text does not fit on one page, the system will automatically split the text into multiple pages.
             A character's face and reaction can be set for each page, and the system will automatically play the talking animation and sound effect for each letter. The context can also be set for each dialogue, so dialogue from a character in the real world would have a different aesthetic compared to dialogue in a level.
@@ -87,6 +91,10 @@ function GameJam() {
             What would a platforming game be without platforms? The platforms were pretty straightforward to code: they are just one way colliders that can optionally move back and forth between two points. The code does get slightly complicate when the platforms are moving, as the player needs to be able to move with the platform. 
             I took the naive approach of making the player a child of the platform object when the player is on top of the platform, and then unparenting the player when the player is no longer on top of the platform.
           </p>
+          <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
+            <video className='video' autoPlay loop muted disablePictureInPicture src='/Media/DrawnToReality/DrawnToRealityCloudsMuted.mp4'/>
+            <p className='Caption'>A cloud platform taking a player upwards.</p>
+          </div>
           <p className='Body-text'>
             This approach did its job for the project, but in hindsight, it probably would have been better to use a different approach for this method messes with the hierarchy of the scene without proper consideration.
             One possible approach could have been to add the platform's velocity to the player's velocity when the player is on top of the platform, so that the player moves with the platform without messing with the hierarchy of the scene. This could also add a momentum aspect to the platforming, which could be interesting.
@@ -98,6 +106,10 @@ function GameJam() {
             In order to spice up the platforming in this game, I programmed the platforming birds to move in a sine wave pattern, so that the player has to time their jumps in order to land on the birds. A dev can then set their speed and amplitude in the Unity Editor to create different patterns for the birds to move in. 
             Additionally, it would not make too much sense for an adult human to be able to stand on the bird, so I gave physics to the birds so that they are weighed down whenever the player is standing on it. This adds an extra layer of challenge to the platforming, as the player has to consider the effects of their weight on the bird's momentum to time their jumps correctly. 
           </p>
+          <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
+            <video className='video' autoPlay loop muted disablePictureInPicture src='/Media/DrawnToReality/DrawnToRealityBirdsMuted.mp4'/>
+            <p className='Caption'>Platforming birds and hostile birds in action!</p>
+          </div>
           <p className='Body-text'>
             This, however, caused unintended side effects, such as the player slowly sliding off the bird as the bird moves. Unfortunately, I did not have enough time to diagnose this issue. Regarding momentum, the player is programmed so that whenever they jump, their vertical velocity gets added to rather than set. So when the player jumps while the bird is moving upwards, the player will jump higher than normal, 
             and vice versa, since the jump velocity is added to the velocity given to the player by the bird. This, once again, was unintended, especially since the regular platforms do not have this effect, but I decided to keep it because at the time, I thought it was a cool feature. In hindsight, I realize it was not the best or most consistent design choice, but it is what it is.

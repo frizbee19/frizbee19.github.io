@@ -27,9 +27,17 @@ function RagdollProject() {
       </nav>
       <div className='App'>
         <header className={displayType}>
-          <h2 className='Subtitle' style={{ marginTop: '2em' }}>Ragdoll Project</h2>
+          <h2 className='Subtitle' style={{ marginTop: '2em', fontSize: '2.5em' }}>Ragdoll Project</h2>
           <p className='Body-text'>
-            A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is serves as a way to establish foundational knowledge for future game development endeavors.
+            A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project serves as a way to establish foundational knowledge for future game development endeavors.
+          </p>
+          <h2 className='Subtitle' style={{ marginTop: '1em' }}>The Marriage of Physics and Animation</h2>
+          <p className='Body-text'>
+            
+          </p>
+          <h2 className='Subtitle' style={{ marginTop: '1em' }}>"Look on the Bright Side..."</h2>
+          <p className='Body-text'>
+
           </p>
         </header>
       </div>

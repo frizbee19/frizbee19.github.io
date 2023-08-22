@@ -135,7 +135,7 @@ function Home() {
         {/* Projects */}
         <div id="projects">
           <header className={displayType}>
-            <h1 className='Subtitle' style={{ paddingRight: '0.5em' }}>
+            <h1 className='Subtitle-dark' style={{ paddingRight: '0.5em' }}>
               Hi. Do you like games? I like games. Let's talk about some of my game projects.
             </h1>
           </header>
@@ -147,10 +147,10 @@ function Home() {
               </video>
               <div className="blur-overlay">
                 <div className="blur-overlay-content">
-                  <h2 className='Subtitle'>
+                  <h2 className='Subtitle-project'>
                     Drawn to Reality
                   </h2>
-                  <p className='Body-text' style={{ lineHeight: '1.55em' }}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
+                  <p className='Body-text truncate-text' style={{ lineHeight: '1.55em' }}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
                   <Link className='blur-overlay-button' to="/drawntoreality">Learn More</Link>
                 </div>
               </div>
@@ -161,7 +161,7 @@ function Home() {
                 <img src='/Media/DrawnToReality/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
               </div>
               <div className="blur-img-content">
-                <h2 className='Subtitle'>
+                <h2 className='Subtitle-project'>
                   Drawn to Reality
                 </h2>
                 <p className='Body-text' style={{ lineHeight: '1.55em' }}>Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure.</p>
@@ -179,11 +179,11 @@ function Home() {
               </video>
               <div className="blur-overlay blur-overlay-right">
                 <div className="blur-overlay-content blur-overlay-content-right">
-                  <h2 className='Subtitle'>
+                  <h2 className='Subtitle-project'>
                     Ragdoll Animation Test
                   </h2>
-                  <p className='Body-text' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project is serves as a way to establish foundational knowledge for future game development endeavors.</p>
-                  <Link className='blur-overlay-button' to="/ragdollproject">Learn More</Link>
+                  <p className='Body-text truncate-text' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project serves as a way to establish foundational knowledge for future game development endeavors.</p>
+                  <Link className='blur-overlay-button'>Coming Soon</Link>
                 </div>
               </div>
             </div>
@@ -193,16 +193,16 @@ function Home() {
                 <img src='/Media/RagdollProject/RagdollProjectMobilePreview.png' alt='Ragdoll Project' className='blur-img'  />
               </div>
               <div className="blur-img-content">
-                <h2 className='Subtitle Body-text-light'>
+                <h2 className='Subtitle-project'>
                   Ragdoll Animation Test
                 </h2>
                 <p className='Body-text Body-text-light' style={{ lineHeight: '1.55em' }}>A grim, experimental project that combines animations and physics to create realistic and reactive animations for a player model falling and dying. This test Unity project serves as a way to establish foundational knowledge for future game development endeavors.</p>
-                <Link className='blur-overlay-button' to="/ragdollproject">Learn More</Link>
+                <Link className='blur-overlay-button'>Coming Soon</Link>
               </div>
             </div>
           )}
           <header className={displayType}>
-            
+            <h1 className='Subtitle' style={{textAlign: 'center'}}>More Coming Soon...</h1>
           </header>
         </div>
       </div>

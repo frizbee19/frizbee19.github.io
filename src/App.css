@@ -186,9 +186,10 @@ button:disabled {
 }
 
 .nav-button:active {
-  background: var(--active-color);
+  background: var(--accent-color);
   /* Slightly lighter background */
   color: var(--light-color);
+  border: 2px solid var(--accent-color);
   /* Light text */
 }
 
@@ -215,7 +216,8 @@ button:disabled {
   border-radius: 50%;
   background: var(--light-color);
   /* Light background */
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--accent-light-color);
+  color: var(--accent-light-color);
   /* Dark border */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.175);
   z-index: 1000;
@@ -230,15 +232,16 @@ button:disabled {
 }
 
 .scrollTop:hover {
-  background: var(--main-color);
+  background: var(--accent-light-color);
   /* Dark background */
   color: var(--light-color);
+  border: 2px solid var(--accent-light-color);
   /* Light text */
 }
 
 .scrollTop:active {
-  background: var(--active-color);
-  border: 2px solid var(--active-color);
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
   /* Slightly lighter background */
   color: var(--light-color);
   /* Light text */

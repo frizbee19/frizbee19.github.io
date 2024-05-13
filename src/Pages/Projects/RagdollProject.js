@@ -1,7 +1,7 @@
-import '../App.css';
+import '../../App.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useMobile } from '../MobileProvider';
+import { useMobile } from '../../Utilities/MobileProvider';
 
 function RagdollProject() {
   const isMobile = useMobile();

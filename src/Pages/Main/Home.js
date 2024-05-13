@@ -1,7 +1,7 @@
-import '../App.css';
+import '../../App.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMobile } from '../MobileProvider';
+import { useMobile } from '../../Utilities/MobileProvider';
 
 
 function Home() {
@@ -138,6 +138,38 @@ function Home() {
             <h1 className='Subtitle-dark' style={{ paddingRight: '0.5em' }}>
               Hi. Do you like games? I like games. Let's talk about some of my game projects.
             </h1>
+          </header>
+          {/* PaperGame */}
+          {!isMobile ? (
+            <div className="video-background">
+              <video className="video-banner" autoPlay loop muted disablePictureInPicture src="/Media/rickroll.mp4">
+                {/* <source src="/Media/rickroll.mp4" type="video/mp4"/> */}
+              </video>
+              <div className="blur-overlay blur-overlay-right">
+                <div className="blur-overlay-content blur-overlay-content-right">
+                  <h2 className='Subtitle-project'>
+                    Paper Game (WIP)
+                  </h2>
+                  <p className='Body-text truncate-text' style={{ lineHeight: '1.55em' }}>A prototype for a First Person Shooter with a pencil-on-paper artstyle. Defeat your enemies with both the mighty pen and sword (or hot lead).</p>
+                  <Link className='blur-overlay-button' to="/papergame">Learn More</Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="blur-img-background">
+              <div>
+                <img src='/Media/DrawnToReality/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
+              </div>
+              <div className="blur-img-content">
+                <h2 className='Subtitle-project'>
+                  Drawn to Reality
+                </h2>
+                <p className='Body-text' style={{ lineHeight: '1.55em' }}>A prototype for a First Person Shooter with a pencil-on-paper artstyle. Defeat your enemies with both the mighty pen and sword (or hot lead).</p>
+                <Link className='blur-overlay-button blur-img-button' to="/drawntoreality">Learn More</Link>
+              </div>
+            </div>
+          )}
+          <header className={displayType}>
           </header>
           {/* Drawn to Reality */}
           {!isMobile ? (

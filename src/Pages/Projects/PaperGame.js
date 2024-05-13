@@ -1,9 +1,9 @@
-import '../App.css';
+import '../../App.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMobile } from '../MobileProvider';
+import { useMobile } from '../../Utilities/MobileProvider';
 
-function GameJam() {
+function PaperGame() {
   const [showScroll, setShowScroll] = useState(false)
   const isMobile = useMobile();
   const displayType = isMobile ? 'App-mobile' : 'App-main';
@@ -41,7 +41,6 @@ function GameJam() {
         {!isMobile ? (
           <nav className={`navbar ${showScroll ? "show" : ''}`}>
             <div className="nav-links-container">
-              <button className='nav-links' onClick={() => { scrollToSection('playgame'); }}>Play Now</button>
               <Link className='nav-button' to="/">Home</Link>
             </div>
           </nav>
@@ -63,30 +62,33 @@ function GameJam() {
       <div className='App'>
         <header className={displayType} id='title' >
           {/* About */}
-          <h2 className='Subtitle' style={{ marginTop: '2em', fontSize: '2.5em' }}>Drawn to Reality</h2>
+          <h2 className='Subtitle' style={{ marginTop: '2em', fontSize: '2.5em' }}>Paper Game (WIP)</h2>
           <p className='Body-text'>
-            Escape to an artist's fantasy world where you play as Seiden, a scaredy cat who wants to overcome their fears with the help of their best friend, Fuki. Face your anxieties head on by playing through 6 different levels, or drawings in this platforming adventure. The game based on the theme "It is not real."
+            A prototype for a First Person Shooter with a pencil-on-paper artstyle. Defeat your enemies with both the mighty pen and sword (or hot lead).
           </p>
           <p className='Body-text'>
-            Made in just under a week with a team of six for the Brackey's Game Jam, Drawn to Reality is a testament to the power of adaptability and teamwork in a high-stress environment. Out of the four programmers of the team, only one of them had had Unity experience prior to the Game Jam. I was among the three that did not.
-            The drive to finish the project and create a product to be proud of pushed me to learn the game engine within the timeframe, allowing us to deliver a game that we were happy with, given that it was the first game for most of the team. Although the team was unable to finish the project in time, it provided for a great learning experience and a fun time that fueled our passion for the industry.
+            This passion project was made using Unreal Engine and was initially meant to serve as a thorough introduction for me to explore everything that Unreal Engine has to offer.
+            As someone who is not artistically inclined, I figured that an art style reminiscent of that of a bored middle schooler doodling on their math homework would be both doable and unique.
+            However to make a 2D art style look good in a 3D environment, I had to make post processing that is tailored to this project.
           </p>
-          {/* Dialogue */}
-          <h2 className='Subtitle' style={{ marginTop: '1em' }}>Dialogue</h2>
+          {/* Graphics */}
+          <h2 className='Subtitle' style={{ marginTop: '1em' }}>Graphics</h2>
           <p className='Body-text'>
-            One of the core components of the game that I worked on is the dialogue system that is present throughout the game. The dialogue system is like those found in old school RPGs, where the text prints out letter by letter at a certain pace, or if input is received from the player, it will instantly print all of the characters for that part of the dialogue.
-            The dialogue boxes show the faces and reactions of the current speaker, and play a talking animation as the letters are getting printed. Additionally, a sound effect gets played at a random pitch within a range for each letter that gets printed.
+            The idea behind the style of the game was to have the 3D environment look like it was hand-drawn like the 2D Doom-like sprites (which represent enemies, items, etc.) that populate it.
+            To achieve this, I made a post processing material blueprint that got the outline of the environment by taking the scene depth and normal information, offsetting it in each direction, then subtracting the offsets from it.
+            What this does is cancel out any similarities, meaning that geometry that has similar depth as the camera will be occluded, and parts of the geometry that are facing in similarly will also be cancelled, leaving only the outlines.
+          </p>
+          <p className='Body-text'>
+            I am not exaggerating much when I say that my drawing skills are on par with a pre-schooler. So in order to match the sprites that I scan and import after hand drawing them on paper, I added a slight displacement 
+            on the outlines using a noise texture and world position, replicating the imperfections seen in the drawings that I have made for the sprites. I multiply a different noise texture by the outline to give it the coarse texture that 
+            a slightly unsharpened pencil would have.
           </p>
           <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
             <video className='video' controls src='/Media/DrawnToReality/DrawnToRealityDialogue.mp4' />
             <p className='Caption'>Dialogue audio, talking animation, different emotes and skipping dialogue.</p>
           </div>
-          <p className='Body-text'>
-            I designed the system to be modular and easy to use, allowing for the team to easily add dialogue to the game. Once the script is added to a textbox game object, developer can manually add pages of dialogue, or if the text does not fit on one page, the system will automatically split the text into multiple pages.
-            A character's face and reaction can be set for each page, and the system will automatically play the talking animation and sound effect for each letter. The context can also be set for each dialogue, so dialogue from a character in the real world would have a different aesthetic compared to dialogue in a level.
-          </p>
-          {/* Platforms */}
-          <h2 className='Subtitle' style={{ marginTop: '1em' }}>Platforms</h2>
+          {/* Gameplay */}
+          <h2 className='Subtitle' style={{ marginTop: '1em' }}>"The Pen is Mightier than the Sword..."</h2>
           <p className='Body-text'>
             What would a platforming game be without platforms? The platforms were pretty straightforward to code: they are just one way colliders that can optionally move back and forth between two points. The code does get slightly complicate when the platforms are moving, as the player needs to be able to move with the platform.
             I took the naive approach of making the player a child of the platform object when the player is on top of the platform, and then unparenting the player when the player is no longer on top of the platform.
@@ -137,34 +139,7 @@ function GameJam() {
             Prior to this game jam, I had never worked on a game before, so I learned a lot about game development in general. I learned about the importance of planning and communication in a team setting, and I learned about the importance of time management and prioritization in a time constrained environment.
             I have long since learned more about the Unity Engine and software design philosophies in general, so in hindsight, I would have done a lot of things differently. However, I am still proud of what I was able to accomplish in the time that I had, and I am grateful for the opportunity to work with my peers on this project.
           </p>
-          <p className='Body-text'>
-            You can play the game right now below (Note: The game is only playable on desktop). Keep in mind that there are still plenty of bugs and issues with the game since we did not have enough time to thoroughly test and debug the game, but I hope you enjoy it nonetheless!
-          </p>
         </header>
-        {!isMobile && (
-          <>
-            <div style={{ justifyContent: 'center', display: 'flex' }}>
-              <div id='playgame' style={{
-                position: 'relative',
-                width: '960px',
-                height: '590px',
-                overflow: 'hidden'
-              }}>
-                <iframe src="https://itch.io/embed-upload/8432359?color=333333" title="Drawn to Reality Game" allowfullscreen="" width="1280" height="740" frameborder="0" style={{
-                  border: 'none',
-                  position: 'relative',
-                  top: '0px', // Adjust these values to hide the unwanted elements
-                  left: '0px',
-                  width: '960px',
-                  height: '640px'
-                }} />
-              </div>
-            </div>
-            <header className='App-main' style={{ marginTop: '-4em', marginHorizontal: '6em' }}>
-              <p className='Caption'>*Note: The master volume is set to be mute every time you enter the main menu so that the audio does not play as soon as this page is loaded. Additionally, some changes were made to the game to make it more web-friendly.</p>
-            </header>
-          </>
-        )}
         <header className="App-main">
 
         </header>
@@ -174,4 +149,4 @@ function GameJam() {
 }
 
 
-export default GameJam;
+export default PaperGame;

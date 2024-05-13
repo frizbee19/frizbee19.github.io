@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import { Link } from 'react-router-dom';
-import { useMobile } from '../MobileProvider';
+import { useMobile } from '../../Utilities/MobileProvider';
 
 const Contact = () => {
   const isMobile = useMobile();

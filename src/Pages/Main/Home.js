@@ -108,7 +108,7 @@ function Home() {
                   Parallel to my professional path, I've been involved in noteworthy projects like the 'Capital One: Vulnerability Warriors' and the 'Drawn to Reality' Game Jam. As an Instructor at iCode, I also had the privilege of teaching programming fundamentals to K-12 students.
                 </p>
                 <p className="Body-text">
-                  Technically, I'm proficient in languages like Java, C/C++, C#, Python, and Node.js. I have experience with Linux/UNIX systems, React Native, Unity, SQL/PostgreSQL, OpenGL, and Git. I also comfortably navigate Agile/Scrum methodologies.
+                  I'm proficient in languages like Java, C/C++, C#, Python, and Node.js. I have experience with Linux/UNIX systems, React Native, Unity, Unreal Engine, SQL/PostgreSQL, OpenGL, and Git. I also comfortably navigate Agile/Scrum methodologies.
                 </p>
               </div>
               <div style={{ flex: !isMobile ? 1.4 : '0 1 auto' }}>
@@ -120,13 +120,13 @@ function Home() {
             </h2>
             <div style={{ flexDirection: 'column' }}>
               <p className="Body-text">
-                Striding the line between systematic precision and creative flair, I bring a unique approach to the world of tech. With extensive experience in professional programming, I find solace in the calculated structure of code while I navigate the ever-evolving landscape of technological innovation.
+                Striding the line between systematic precision and creative flair, I try to bring a unique approach to the world of tech. I find solace in the calculated structure of code while I navigate the ever-evolving landscape of technological innovation.
               </p>
               <p className="Body-text">
-                Outside my professional life, I've taken a dive into the largely uncharted field of game design. It's more than just a hobby to me. It's the catalyst for me to explore my innate curiosity, and my passion to expand the boundaries of my knowledge.
+                Outside my professional life, I've taken a dive into the field of game design. It's more than just a hobby to me. It's the catalyst for me to explore my innate curiosity, and my passion to expand the boundaries of my knowledge.
               </p>
               <p className="Body-text">
-                Every line of code I write, every problem I solve, is driven by one mission: to use technology as a powerful tool to forge connections, illuminate insights, and drive change. Balancing creativity with logic, I seek not only to adapt to the fast-paced world of tech but also to influence its trajectory, one program at a time.
+                Every line of code I write, every problem I solve, is driven by one mission: to use technology as a powerful tool to forge connections with others. I seek not only to adapt to the fast-paced world of tech but also to influence its trajectory, one program at a time.
               </p>
             </div>
           </header>

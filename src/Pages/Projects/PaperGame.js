@@ -98,6 +98,10 @@ function PaperGame() {
             While the gameplay so far may be inspired by old school shooter games like classic Doom, the main mechanic for the game will be the drawing system. 
             Players will be able to draw symbols after entering Draw Mode; each symbol corresponds to a different action, such as reloading ammo for a certain weapon, healing, opening a door, etc. 
           </p>
+          <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
+            <video className='video' autoPlay loop muted disablePictureInPicture src='/Media/PaperGame/papergamedraw.mp4' />
+            <p className='Caption'>The player uses up all of their ammo, then draws a shotgun shell to reload their shotgun.</p>
+          </div>
           <p className='Body-text'>
             In order to read and process what the player draws, there is an algorithm called {' '}
             <a href="https://depts.washington.edu/acelab/proj/dollar/index.html" target="_blank" rel="noopener noreferrer">$1 Unistroke Recognizer</a>
@@ -106,10 +110,6 @@ function PaperGame() {
             <a href="https://www.unrealengine.com/marketplace/en-US/product/similarityrecognition" target="_blank" rel="noopener noreferrer">marketplace asset</a>
             {' '} for prototyping purposes since the way I have currently implemented the algorithm is not demo-ready. The plan is to iterate on my implementation until I have a version that works with less errors than any external assets.
           </p>
-          <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
-            <video className='video' autoPlay loop muted disablePictureInPicture src='/Media/PaperGame/papergamedraw.mp4' />
-            <p className='Caption'>The player uses up all of their ammo, then draws a shotgun shell to reload their shotgun.</p>
-          </div>
         </header>
         <header className="App-main">
 

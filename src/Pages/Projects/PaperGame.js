@@ -89,8 +89,8 @@ function PaperGame() {
             a slightly unsharpened pencil would have.
           </p>
           <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
-            <img className='video' src='/Media/PaperGame/papergame.png' alt="PaperGame"/>
-            <p className='Caption'>Demo environment rendered to look like the hand-drawn sprites.</p>
+            <img className='video' src='/Media/PaperGame/papergamecube.png' alt="PaperGame"/>
+            <p className='Caption'>A cube rendered with the post processing materials.</p>
           </div>
           {/* Gameplay */}
           <h2 className='Subtitle' style={{ marginTop: '1em' }}>"The Pen is Mightier than the Sword..."</h2>
@@ -106,6 +106,10 @@ function PaperGame() {
             <a href="https://www.unrealengine.com/marketplace/en-US/product/similarityrecognition" target="_blank" rel="noopener noreferrer">marketplace asset</a>
             {' '} for prototyping purposes since the way I have currently implemented the algorithm is not demo-ready. The plan is to iterate on my implementation until I have a version that works with less errors than any external assets.
           </p>
+          <div className={`video-container ${isMobile ? 'video-container-mobile' : ''}`}>
+            <video className='video' autoPlay loop muted disablePictureInPicture src='/Media/PaperGame/papergamedraw.mp4' />
+            <p className='Caption'>The player uses up all of their ammo, then draws a shotgun shell to reload their shotgun.</p>
+          </div>
         </header>
         <header className="App-main">
 

@@ -142,7 +142,7 @@ function Home() {
           {/* PaperGame */}
           {!isMobile ? (
             <div className="video-background">
-              <video className="video-banner" autoPlay loop muted disablePictureInPicture src="/Media/rickroll.mp4">
+              <video className="video-banner" autoPlay loop muted disablePictureInPicture src="/Media/PaperGame/papergamepreview.mp4">
                 {/* <source src="/Media/rickroll.mp4" type="video/mp4"/> */}
               </video>
               <div className="blur-overlay blur-overlay-right">

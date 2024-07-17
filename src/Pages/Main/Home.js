@@ -158,14 +158,14 @@ function Home() {
           ) : (
             <div className="blur-img-background">
               <div>
-                <img src='/Media/DrawnToReality/DrawnToRealityMobilePreview.png' alt='Drawn to Reality' className='blur-img' />
+                <img src='/Media/PaperGame/papergame.png' alt='Drawn to Reality' className='blur-img' />
               </div>
               <div className="blur-img-content">
                 <h2 className='Subtitle-project'>
-                  Drawn to Reality
+                  Paper Game (WIP)
                 </h2>
                 <p className='Body-text' style={{ lineHeight: '1.55em' }}>A prototype for a First Person Shooter with a pencil-on-paper artstyle. Defeat your enemies with both the mighty pen and sword (or hot lead).</p>
-                <Link className='blur-overlay-button blur-img-button' to="/drawntoreality">Learn More</Link>
+                <Link className='blur-overlay-button blur-img-button' to="/papergame">Learn More</Link>
               </div>
             </div>
           )}
